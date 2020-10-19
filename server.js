@@ -13,6 +13,10 @@ app.listen(PORT, (err) => {
   console.log(`Currently listening on ${PORT}`)
 });
 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/dbExercise')
+
+
+
 
 //Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/dbExample", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/dbExercise", { useNewUrlParser: true });
